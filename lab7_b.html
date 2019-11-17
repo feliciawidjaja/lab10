@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+
+
+        <img src="cat.jpg" id="kittycat" height="300px" width="300px">
+
+        <script>
+
+        let width = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+
+        let height = window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+        
+        function catmove(){
+            leftpos = Math.random() * (width - 300)
+            toppos = Math.random() * (height - 300)
+            document.getElementById('kittycat').style.position = 'absolute'
+            document.getElementById('kittycat').style.left = leftpos + 'px'
+            document.getElementById('kittycat').style.top = toppos + 'px'
+        }
+        document.getElementById('kittycat').onclick = catmove
+        
+        
+        </script>
+
+
+
+    </body>
+</html>
